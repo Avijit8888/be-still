@@ -12,9 +12,56 @@ box-sizing:border-box;
 body{
 height:100vh;
 overflow:hidden;
-font-family:'Inter',sans-serif;
+font-family:Arial, sans-serif;
 background:#050608;
 color:var(--text);
+}
+
+/* INTRO */
+.intro{
+position:fixed;
+inset:0;
+background:black;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+z-index:30;
+color:white;
+padding:20px;
+}
+
+.intro h2,
+.intro p,
+.intro span{
+opacity:0;
+animation:fadeUp 2s ease forwards;
+}
+
+.intro p{
+animation-delay:1s;
+opacity:0.7;
+}
+
+.intro span{
+animation-delay:2s;
+opacity:0.6;
+margin-bottom:40px;
+}
+
+.intro-btn{
+background:none;
+border:1px solid white;
+color:white;
+padding:10px 25px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.intro-btn:hover{
+background:white;
+color:black;
 }
 
 /* BACKGROUND */
@@ -28,7 +75,6 @@ z-index:1;
 transition:filter 1s ease, transform 2s ease;
 }
 
-
 .bg.blur{ filter:blur(4px); }
 .bg.zoom{ transform:scale(1.15); }
 
@@ -38,7 +84,6 @@ transition:filter 1s ease, transform 2s ease;
 100%{transform:scale(1.05);}
 }
 
-/* OVERLAY */
 .overlay{
 position:fixed;
 inset:0;
@@ -46,7 +91,6 @@ background:radial-gradient(circle,rgba(0,0,0,0.3),rgba(0,0,0,0.85));
 z-index:2;
 }
 
-/* MAIN CONTAINER */
 .container{
 position:relative;
 z-index:3;
@@ -69,13 +113,13 @@ animation:fadeUp 1.2s ease forwards;
 }
 
 .quote h1{
-font-size:clamp(2.2rem,6vw,3.5rem);
+font-size:2.5rem;
 animation-delay:0.3s;
 }
 
 .quote p{
 margin-top:15px;
-font-size:clamp(1.1rem,3vw,1.6rem);
+font-size:1.2rem;
 color:var(--muted);
 animation-delay:1s;
 }
@@ -127,15 +171,13 @@ transform:translateY(-3px);
 /* MESSAGE */
 .message{
 margin-top:40px;
-font-size:1.5rem;
+font-size:1.3rem;
 max-width:500px;
-opacity:0;
-animation:fadeUp 1s ease forwards;
 }
 
 /* NAV BUTTON */
 .nav-btn{
-margin-top:25px;
+margin-top:20px;
 background:none;
 border:1px solid rgba(255,255,255,0.3);
 color:white;
@@ -148,6 +190,24 @@ transition:0.3s;
 border-color:white;
 transform:translateY(-2px);
 }
+
+/* STORY */
+.story{
+position:fixed;
+inset:0;
+z-index:14;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+background:black;
+opacity:0;
+transition:opacity 2s ease;
+padding:20px;
+}
+
+.story.show{ opacity:1; }
 
 /* AWAKENING */
 .awakening{
