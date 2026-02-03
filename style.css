@@ -17,19 +17,11 @@ background:#050608;
 color:var(--text);
 }
 
-/* STARS */
-#stars{
-position:fixed;
-inset:0;
-z-index:0;
-pointer-events:none;
-}
-
 /* BACKGROUND */
 .bg{
 position:fixed;
 inset:0;
-background:url("assets/mahadev.webp") center/cover no-repeat;
+background:url("assets/mahadev.jpg") center/cover no-repeat;
 transform:scale(1.05);
 animation:breathe 14s ease-in-out infinite;
 z-index:1;
@@ -45,6 +37,7 @@ transition:filter 1s ease, transform 2s ease;
 100%{transform:scale(1.05);}
 }
 
+/* OVERLAY */
 .overlay{
 position:fixed;
 inset:0;
@@ -52,6 +45,7 @@ background:radial-gradient(circle,rgba(0,0,0,0.3),rgba(0,0,0,0.85));
 z-index:2;
 }
 
+/* MAIN CONTAINER */
 .container{
 position:relative;
 z-index:3;
@@ -154,21 +148,6 @@ border-color:white;
 transform:translateY(-2px);
 }
 
-/* TRANSITION */
-.transition-layer{
-position:fixed;
-inset:0;
-background:black;
-opacity:0;
-pointer-events:none;
-z-index:20;
-transition:opacity 0.8s ease;
-}
-
-.transition-layer.active{
-opacity:1;
-}
-
 /* AWAKENING */
 .awakening{
 position:fixed;
@@ -179,30 +158,11 @@ flex-direction:column;
 align-items:center;
 justify-content:center;
 text-align:center;
-background:radial-gradient(circle,#020203,#000);
+background:black;
 opacity:0;
 transition:opacity 2s ease;
 }
 
 .awakening.show{ opacity:1; }
 
-.awakening h2{
-font-size:clamp(2rem,5vw,3rem);
-margin-bottom:20px;
-}
-
-.awakening p{
-opacity:0.7;
-margin-bottom:30px;
-}
-
-/* HIDDEN */
 .hidden{ display:none; }
-
-/* MOBILE */
-@media(max-width:768px){
-.options{
-flex-direction:column;
-gap:15px;
-}
-}
