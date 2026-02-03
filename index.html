@@ -10,13 +10,24 @@
 
 <body>
 
-<canvas id="stars"></canvas>
+<!-- INTRO PAGE -->
+<div class="intro" id="intro">
 
+<h2>Some memories are not meant to be forgotten...</h2>
+<p>Some souls are not meant to stay...</p>
+<span>And some journeys begin only after everything feels lost.</span>
+
+<button onclick="startJourney()" class="intro-btn">
+Begin Journey
+</button>
+
+</div>
+
+<!-- BACKGROUND -->
 <div class="bg"></div>
 <div class="overlay"></div>
 
-<div class="transition-layer" id="transition"></div>
-
+<!-- MAIN CONTENT -->
 <div class="container">
 
 <div class="quote" id="quote">
@@ -34,15 +45,23 @@
 
 <div class="message hidden" id="message">
 <p id="messageText"></p>
+<button class="nav-btn" onclick="nextStory()">Continue</button>
 <button class="nav-btn" onclick="goBack()">Back</button>
 </div>
 
 </div>
 
+<!-- STORY -->
+<div class="story hidden" id="story">
+<h2 id="storyTitle"></h2>
+<p id="storyContent"></p>
+<button class="nav-btn" onclick="nextStory()">Continue</button>
+</div>
+
+<!-- AWAKENING -->
 <div class="awakening hidden" id="awakening">
 <h2>You were never lost.</h2>
 <p>You were only remembering who you are.</p>
-<span>🕉️</span>
 <button class="nav-btn" onclick="restartJourney()">Restart</button>
 </div>
 
