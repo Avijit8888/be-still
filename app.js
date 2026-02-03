@@ -1,14 +1,13 @@
-/* ELEMENTS */
-const quote = document.getElementById("quote");
-const options = document.getElementById("options");
-const message = document.getElementById("message");
-const awakening = document.getElementById("awakening");
-const bg = document.querySelector(".bg");
-const transition = document.getElementById("transition");
+const quote=document.getElementById("quote");
+const options=document.getElementById("options");
+const message=document.getElementById("message");
+const messageText=document.getElementById("messageText");
+const awakening=document.getElementById("awakening");
+const bg=document.querySelector(".bg");
+const transition=document.getElementById("transition");
 
-/* QUOTE CLICK */
+/* Quote Click */
 quote.addEventListener("click",()=>{
-
 startTransition(()=>{
 quote.classList.add("hidden");
 options.classList.remove("hidden");
@@ -16,12 +15,10 @@ options.classList.remove("hidden");
 setTimeout(()=>{
 options.classList.add("show");
 },100);
-
+});
 });
 
-});
-
-/* USER CHOICE */
+/* Choose Option */
 function choose(type){
 
 startTransition(()=>{
@@ -46,28 +43,57 @@ if(type==="letgo"){
 text="Release what burdens your soul. Freedom begins with surrender.";
 }
 
-message.innerText=text;
+messageText.innerText=text;
 
-/* Awakening Scene */
 setTimeout(()=>{
 awakening.classList.remove("hidden");
 awakening.classList.add("show");
 },6000);
 
 });
-
 }
 
-/* TRANSITION FUNCTION */
-function startTransition(callback){
+/* Back */
+function goBack(){
 
+startTransition(()=>{
+message.classList.add("hidden");
+options.classList.remove("hidden");
+
+bg.classList.remove("blur");
+bg.classList.remove("zoom");
+
+setTimeout(()=>{
+options.classList.add("show");
+},100);
+});
+}
+
+/* Restart */
+function restartJourney(){
+
+startTransition(()=>{
+awakening.classList.remove("show");
+awakening.classList.add("hidden");
+
+message.classList.add("hidden");
+options.classList.add("hidden");
+
+quote.classList.remove("hidden");
+
+bg.classList.remove("blur");
+bg.classList.remove("zoom");
+});
+}
+
+/* Transition */
+function startTransition(callback){
 transition.classList.add("active");
 
 setTimeout(()=>{
 callback();
 transition.classList.remove("active");
 },800);
-
 }
 
 /* STAR UNIVERSE */
