@@ -1,43 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Be Still</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Be Still</title>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-  <!-- Background -->
-  <div class="bg"></div>
-  <div class="overlay"></div>
+<!-- Background -->
+<div class="bg"></div>
+<div class="overlay"></div>
 
-  <!-- Main Content -->
-  <main class="container">
-    <h1 class="quote">
-      <span>Be still.</span>
-      <span>I am working in ways</span>
-      <span>your mind cannot measure.</span>
-    </h1>
+<!-- Content -->
+<div class="container">
 
-    <p class="signature">— Mahadev</p>
+<div class="quote" id="quote">
+    <h1>Be still.</h1>
+    <p>I am working in ways your mind cannot measure.</p>
+    <span>— Mahadev</span>
+    <small>(Tap / Click)</small>
+</div>
 
-    <nav class="choices">
-      <button data-choice="still">Be Still</button>
-      <button data-choice="understand">Seek Understanding</button>
-      <button data-choice="trust">Trust the Process</button>
-    </nav>
-  </main>
+<div class="options hidden" id="options">
+    <button onclick="choose('listen')">Listen</button>
+    <button onclick="choose('reflect')">Reflect</button>
+    <button onclick="choose('letgo')">Let go</button>
+</div>
 
-  <!-- Final State -->
-  <section class="state" id="state">
-    <p id="stateText"></p>
-  </section>
+<div class="message hidden" id="message"></div>
 
-  <script src="app.js"></script>
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
