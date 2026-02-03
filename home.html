@@ -1,40 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Be Still</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spiritual Journey</title>
 
-<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+<!-- Cosmic Stars -->
+<canvas id="stars"></canvas>
 
 <!-- Background -->
 <div class="bg"></div>
 <div class="overlay"></div>
 
-<!-- Content -->
+<!-- Transition -->
+<div class="transition-layer" id="transition"></div>
+
+<!-- Main Content -->
 <div class="container">
 
 <div class="quote" id="quote">
-    <h1>Be still.</h1>
-    <p>I am working in ways your mind cannot measure.</p>
-    <span>— Mahadev</span>
-    <small>(Tap / Click)</small>
+<h1>Be still.</h1>
+<p>I am working in ways your mind cannot measure.</p>
+<span>— Mahadev</span>
+<small>(Tap / Click)</small>
 </div>
 
 <div class="options hidden" id="options">
-    <button onclick="choose('listen')">Listen</button>
-    <button onclick="choose('reflect')">Reflect</button>
-    <button onclick="choose('letgo')">Let go</button>
+<button onclick="choose('listen')">Listen</button>
+<button onclick="choose('reflect')">Reflect</button>
+<button onclick="choose('letgo')">Let go</button>
 </div>
 
 <div class="message hidden" id="message"></div>
 
 </div>
 
+<!-- Awakening Scene -->
+<div class="awakening hidden" id="awakening">
+<h2>You were never lost.</h2>
+<p>You were only remembering who you are.</p>
+<span>🕉️</span>
+</div>
+
 <script src="script.js"></script>
 
 </body>
-</html>
+</html> 
