@@ -21,12 +21,13 @@ color:var(--text);
 .bg{
 position:fixed;
 inset:0;
-background:url("assets/mahadev.jpg") center/cover no-repeat;
+background:url("mahadev.jpeg") center/cover no-repeat;
 transform:scale(1.05);
 animation:breathe 14s ease-in-out infinite;
 z-index:1;
 transition:filter 1s ease, transform 2s ease;
 }
+
 
 .bg.blur{ filter:blur(4px); }
 .bg.zoom{ transform:scale(1.15); }
